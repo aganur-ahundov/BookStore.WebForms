@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="BookStore.Pages._default" 
     MasterPageFile="~/Pages/Store.Master"%>
 
-
 <asp:Content ContentPlaceHolderID="contentBody" runat="server">
         <div id="content">
             <%
@@ -28,8 +27,8 @@
                     {
                         Response.Write(
                             String.Format(@"
-                                        <a href='/Pages/default.aspx?page={0}' class={1}>{2} </a>"
-                                       ,i
+                                        <a href='{0}' class={1}>{2}</a>"
+                                       , GetPagePath(i)
                                        , (i == CurrentPage)? "selected" : ""
                                        ,i)
                             );

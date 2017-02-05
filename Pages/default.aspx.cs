@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.Routing;
 using BookStore.Models;
 
 //using System.Web;
@@ -32,17 +33,35 @@ namespace BookStore.Pages
         {
             get
             {
-                int page;
-                string value = Request.QueryString["page"];
-
-                page = (value != null) && int.TryParse(value, out page) ? page : 1;
+                int page = GetPageFromRequest();
                 return (page > MaxPages) ? MaxPages : page; 
             }
         }
 
+
         protected int MaxPages
         {            
             get { return (int)Math.Ceiling( (decimal)context.Books.Count() / BooksOnPage ); }
+        }
+
+
+        private int GetPageFromRequest()
+        {
+            int page;
+            string value = (string)RouteData.Values["page"]
+                ?? Request.QueryString["page"];
+
+            page = ((value != null) && int.TryParse(value, out page)) 
+                    ? page : 1;
+
+            return page;
+        }
+
+        protected string GetPagePath( int _num )
+        {
+           return RouteTable.Routes.GetVirtualPath(
+                            null, null,
+                            new RouteValueDictionary() { { "page", _num } }).VirtualPath;
         }
 
         protected void Page_Load(object sender, EventArgs e)
