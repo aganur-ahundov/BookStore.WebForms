@@ -7,6 +7,14 @@ body{
     margin: 0;
 }
 
+div#content {
+    margin-left: 200px;
+    border-left: 2px solid #808080;
+}
+
+
+
+/*Заголовок в начале страницы*/
 div#title {
     font-size: 50px;
     padding: 60px;
@@ -14,11 +22,11 @@ div#title {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-div#content {
-    margin-left: 260px;
-    border-left: 2px solid #808080;
-}
 
+
+/*
+    item - блок для каждой отдельной книги
+*/
 div.item {
     font-family: 'Palatino Linotype';
     border-top: 1px dotted grey;
@@ -34,11 +42,11 @@ div.item:first-child{
     border-top:none;
 }
 
-div#genreList{
-    float: left;
-    background: grey;
-}
 
+
+/*
+    pageNum - ссылки для перехода между страницами (1,2,3...)
+*/
 div#pageNum{
     text-align:center;
     font-size: 20px;
@@ -67,3 +75,36 @@ div#pageNum a {
 div#pageNum a:hover {
     background-color: Silver;
 }
+
+
+
+
+/*
+    genreList - колонка с допустимыми жанрами
+*/
+div#genreList {
+    float: left;
+    font-size: 20px;
+}
+
+    div#genreList a {
+        display: block;
+        margin-left:10px;
+        padding: 20px 60px 5px 30px;
+        text-decoration: none;
+        border-bottom: 1px solid silver;
+        color:black;
+    }
+
+    div#genreList a:hover{
+        background-color: grey;
+    }
+
+        div#genreList a.selected {
+            background-color: darkcyan;
+            color:white;
+        }
+
+    div#genreList p{
+        margin:1px;
+    }

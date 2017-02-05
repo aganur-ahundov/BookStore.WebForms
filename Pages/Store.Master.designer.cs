@@ -22,6 +22,15 @@ namespace BookStore.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// GenreList элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::BookStore.Control.GenreList GenreList;
+        
+        /// <summary>
         /// contentBody элемент управления.
         /// </summary>
         /// <remarks>
