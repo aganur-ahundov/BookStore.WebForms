@@ -10,6 +10,7 @@ namespace BookStore.App_Start
     {
         public static void RouteRegister( RouteCollection routes )
         {
+            routes.MapPageRoute(null, "list/{genre}/{page}", "~/Pages/default.aspx");
             routes.MapPageRoute(null, "list/{page}", "~/Pages/default.aspx");
             routes.MapPageRoute(null, "", "~/Pages/default.aspx");
             routes.MapPageRoute(null, "list", "~/Pages/default.aspx");

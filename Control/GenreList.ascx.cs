@@ -32,12 +32,18 @@ namespace BookStore.Control
 
         protected string CreateGenreLinkHtml(string _genre)
         {
+            string selectedCategory = (string)Page.RouteData.Values["genre"]
+                ?? Request.QueryString["genre"];
+
             string path = RouteTable.Routes.GetVirtualPath(
                   null
                 , null
                 , new RouteValueDictionary(){ { "genre", _genre }, { "page", "1" } }).VirtualPath;
 
-            return String.Format(@"<a href='{0}'>{1}</a>", path, _genre);
+            return String.Format(@"<a href='{0}' {1}>{2}</a>"
+                    , path
+                    , selectedCategory == _genre ? "class='selected'" : ""
+                    , _genre);
         }
     }
 }

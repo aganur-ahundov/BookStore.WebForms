@@ -20,7 +20,7 @@ namespace BookStore.Pages
         {
             get
             {
-                return context.Books
+                return FilterBooks()
                     .OrderBy(x => x.ID)
                     .Skip((CurrentPage - 1) * BooksOnPage)
                     .Take(BooksOnPage);
@@ -41,7 +41,7 @@ namespace BookStore.Pages
 
         protected int MaxPages
         {            
-            get { return (int)Math.Ceiling( (decimal)context.Books.Count() / BooksOnPage ); }
+            get { return (int)Math.Ceiling( (decimal)FilterBooks().Count() / BooksOnPage ); }
         }
 
 
@@ -56,6 +56,19 @@ namespace BookStore.Pages
 
             return page;
         }
+
+
+        private IEnumerable<Book> FilterBooks()
+        {
+            IEnumerable<Book> books = context.Books;
+            string genre =
+                (string)RouteData.Values["genre"]
+                ?? Request.QueryString["genre"];
+
+            return genre == null ? books 
+                : books.Where( g => g.Genre == genre) ;
+        }
+
 
         protected string GetPagePath( int _num )
         {
