@@ -14,7 +14,7 @@
                         <h4><%# Item.Price.ToString("c") %></h4>
                     </div>
 
-                    <button type="submit" class="actionButton" value="<%# Item.ID %>" runat="server">
+                    <button name="add" type="submit" value="<%# Item.ID %>" runat="server">
                         Добавить в корзину
                     </button>
 

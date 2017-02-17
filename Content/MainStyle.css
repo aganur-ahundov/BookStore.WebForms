@@ -42,7 +42,10 @@ div.item:first-child{
     border-top:none;
 }
 
-
+div.item button {
+    background-color: darkcyan;
+    float: right;
+}
 
 /*
     pageNum - ссылки для перехода между страницами (1,2,3...)
@@ -62,15 +65,12 @@ div#pageNum a {
      margin: 5px;
 }
 
-    /*div#pageNum a:last-child {
-        padding-right: 6px;
-    }*/
-
 
     div#pageNum a.selected {
         background: darkcyan;
         color: white;
     }
+
 
 div#pageNum a:hover {
     background-color: Silver;

@@ -7,13 +7,6 @@ namespace BookStore.Models
 {
     public class Book
     {
-        //public Book(string _title, string _author, string _description, string _genre, decimal _price)
-        //{
-        //    Title = _title;
-        //    Author = _author;
-        //    Genre = _genre;
-        //    Price = _price;
-        //}
 
         public int ID { get; set; }
         public string Title { get; set; }
