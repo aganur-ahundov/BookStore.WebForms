@@ -3,22 +3,23 @@
 
 <asp:Content ContentPlaceHolderID="contentBody" runat="server">
         <div id="content">
-            <%
-                foreach(BookStore.Models.Book book in Books)
-                {
-                    Response.Write(
-                        String.Format(@"
-                        <div class='item'>
-                            <h2>{0}</h2>
-                                <h3>{1}</h3>
-                                <p>{2}</p>
-                            <h4>{3:c}</h4>
-                        </div>",
-                        book.Title, book.Author, book.Description , book.Price
-                        )
-                        );
-                }
-                 %>
+            <asp:Repeater ItemType="BookStore.Models.Book" 
+                SelectMethod="Books" runat="server" >
+                <ItemTemplate>
+
+                    <div class="item" >
+                        <h2><%# Item.Title %></h2>
+                        <h3><%# Item.Author %></h3>
+                        <p> <%# Item.Description %></p>
+                        <h4><%# Item.Price.ToString("c") %></h4>
+                    </div>
+
+                    <button type="submit" class="actionButton" value="<%# Item.ID %>" runat="server">
+                        Добавить в корзину
+                    </button>
+
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
 
         <div id="pageNum">

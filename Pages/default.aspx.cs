@@ -16,16 +16,12 @@ namespace BookStore.Pages
         protected const int BooksOnPage = 3;
 
 
-        protected IEnumerable<Book> Books
+        public IEnumerable<Book> Books()
         {
-            get
-            {
                 return FilterBooks()
                     .OrderBy(x => x.ID)
                     .Skip((CurrentPage - 1) * BooksOnPage)
                     .Take(BooksOnPage);
-                    
-            }
         }
 
 
