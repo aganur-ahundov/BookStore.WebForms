@@ -7,45 +7,36 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace BookStore.Pages {
+namespace BookStore.Control {
     
     
-    public partial class Store {
+    public partial class CartSummary {
         
         /// <summary>
-        /// form1 элемент управления.
+        /// csQuantity элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl csQuantity;
         
         /// <summary>
-        /// homeLink элемент управления.
+        /// csTotalSum элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor homeLink;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl csTotalSum;
         
         /// <summary>
-        /// GenreList элемент управления.
+        /// cartLink элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::BookStore.Control.GenreList GenreList;
-        
-        /// <summary>
-        /// contentBody элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder contentBody;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor cartLink;
     }
 }

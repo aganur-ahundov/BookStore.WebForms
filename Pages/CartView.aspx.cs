@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using BookStore.Models;
 using BookStore.Models.Helper;
@@ -9,7 +10,23 @@ namespace BookStore.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                int bookID;
+                string value = Request["remove"];
 
+                if (int.TryParse(value, out bookID))
+                {
+                    BookContext bc = new BookContext();
+
+                    Book bookToRemove = bc.Books
+                                        .Where(b => b.ID == bookID)
+                                        .FirstOrDefault();
+
+                    if (bookToRemove != null)
+                        SessionHelper.GetCart(Session).RemoveLine(bookToRemove);
+                }
+            }
         }
 
 

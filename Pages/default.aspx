@@ -12,11 +12,13 @@
                         <h3><%# Item.Author %></h3>
                         <p> <%# Item.Description %></p>
                         <h4><%# Item.Price.ToString("c") %></h4>
-                    </div>
 
-                    <button name="add" type="submit" value="<%# Item.ID %>" runat="server">
-                        Добавить в корзину
-                    </button>
+                        
+                        <button name="add" class="action-button" type="submit" value="<%# Item.ID %>" runat="server">
+                            Добавить в корзину
+                        </button>
+
+                    </div>
 
                 </ItemTemplate>
             </asp:Repeater>

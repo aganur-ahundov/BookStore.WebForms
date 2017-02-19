@@ -1,7 +1,13 @@
-﻿header {
+﻿
+header {
     border-bottom: 2px solid #808080;
     background: darkcyan;
 }
+
+a#homeLink{
+    text-decoration:none;
+}
+
 
 body{
     margin: 0;
@@ -24,6 +30,7 @@ div#title {
 
 
 
+
 /*
     item - блок для каждой отдельной книги
 */
@@ -42,10 +49,8 @@ div.item:first-child{
     border-top:none;
 }
 
-div.item button {
-    background-color: darkcyan;
-    float: right;
-}
+
+
 
 /*
     pageNum - ссылки для перехода между страницами (1,2,3...)
@@ -61,7 +66,6 @@ div#pageNum{
 div#pageNum a {
      color: grey;
      text-decoration: none;
-     /*padding-right: 5px;*/
      margin: 5px;
 }
 
@@ -75,6 +79,7 @@ div#pageNum a {
 div#pageNum a:hover {
     background-color: Silver;
 }
+
 
 
 
@@ -108,3 +113,125 @@ div#genreList {
     div#genreList p{
         margin:1px;
     }
+
+
+
+/*
+    Action buttons
+*/
+button.action-button {
+    padding: 5px 7px 5px 10px;
+    color: white;
+    border: 1px solid grey;
+    background-color: darkcyan;
+    float: right;
+}
+
+button.action-button:hover {
+        background-color: grey;
+        border: 1px solid darkcyan;
+    }
+
+
+
+
+/*
+    CartView page
+*/
+#cartTable {
+    width: 60%;
+}
+
+#cartTable thead th{
+    font:bold;
+    text-align:right;
+}
+
+#cartTable thead th:first-child{
+    text-align:center;
+}
+
+#cartTable thead th:nth-child(2)
+{
+    text-align:left;
+}
+
+
+#cartTable tbody td:first-child {
+    text-align: center;
+}
+
+#cartTable tbody td{
+    padding: 5px 0px 5px 0px;
+    text-align:right;
+}
+
+#cartTable tbody td:nth-child(2)
+{
+    text-align:left;
+}
+
+
+#cartTable tfoot td{
+    border-top: 1px dotted grey;
+    font-weight: bold;
+    text-align:right;
+}
+
+p.cart-button {
+        width:12%;
+        padding: 10px;
+        color: white;
+        border: 1px solid grey;
+        background-color: darkcyan;
+        text-align: center;
+        margin-left:30px;
+    }
+
+    .cart-button a {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration: none;
+        color: white;
+    }
+
+
+td button.cart-button {
+    padding: 10px;
+    color: white;
+    border: 1px solid grey;
+    background-color: darkcyan;
+}
+
+.cart-button:hover{
+    background-color:grey;
+    border-color:darkcyan;
+}
+
+
+/*
+    CartSummary style
+*/
+div#cart-summary{
+   float:right;
+   margin: 70px;
+   padding: 10px;
+
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   font-size:18px;
+   
+   background-color:grey;
+   color:white;
+
+   border: 1px solid silver;
+}
+
+div#cart-summary a{
+    
+    padding: 5px;
+    text-decoration:none;
+    
+    color:white;
+    background: darkcyan;
+
+    border: 1px solid silver;
+}

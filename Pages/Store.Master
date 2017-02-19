@@ -1,6 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="BookStore.Pages.Store" %>
 
 <%@ Register src="../Control/GenreList.ascx" tagname="GenreList" tagprefix="BS" %>
+<%@ Register Src="~/Control/CartSummary.ascx" TagName="cartSummary" TagPrefix="BS" %>
 
 <!DOCTYPE html>
 
@@ -14,7 +15,10 @@
     <form id="form1" runat="server">
        
         <header>
-            <div id="title">BookStore - книжный магазин</div>
+            <BS:cartSummary runat="server" />
+            <a id="homeLink" runat="server">
+                <div id="title">BookStore - книжный магазин</div>
+            </a>
         </header>
 
         <div id="container">
