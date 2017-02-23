@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Web.Routing;
 using System.Collections.Generic;
 using BookStore.Models;
 using BookStore.Models.Helper;
@@ -40,6 +41,17 @@ namespace BookStore.Pages
         {
             get { return SessionHelper.Get<string>(Session, SessionKey.RETURN_URL); }
         }
+
+
+        public string CashboxURL
+        {
+            get {
+                return RouteTable.Routes
+                  .GetVirtualPath(null, "cashbox", null)
+                  .VirtualPath;
+            }
+        }
+
 
         public decimal CartTotal
         {

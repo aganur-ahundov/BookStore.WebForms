@@ -41,8 +41,9 @@
                         </tfoot>
                 </table>
 
-                <p class="cart-button">
-                        <a href="<%= ReturnURL %>">Продолжить покупки</a>
+                <p>
+                        <a class="cart-button" href="<%= ReturnURL %>">Продолжить покупки</a>
+                        <a class="cart-button" href="<%= CashboxURL %>">Оформить заказ</a>
                 </p>
         </div>
     </asp:Content>

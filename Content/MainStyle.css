@@ -4,12 +4,12 @@ header {
     background: darkcyan;
 }
 
-a#homeLink{
-    text-decoration:none;
+a#homeLink {
+    text-decoration: none;
 }
 
 
-body{
+body {
     margin: 0;
 }
 
@@ -41,12 +41,12 @@ div.item {
     padding: 30px;
 }
 
-.item h2{
-    margin:0;
+.item h2 {
+    margin: 0;
 }
 
-div.item:first-child{
-    border-top:none;
+div.item:first-child {
+    border-top: none;
 }
 
 
@@ -55,30 +55,30 @@ div.item:first-child{
 /*
     pageNum - ссылки для перехода между страницами (1,2,3...)
 */
-div#pageNum{
-    text-align:center;
+div#pageNum {
+    text-align: center;
     font-size: 20px;
     font-family: Verdana;
     padding: 20px;
     border-top: 2px solid #808080;
 }
 
-div#pageNum a {
-     color: grey;
-     text-decoration: none;
-     margin: 5px;
-}
-
-
-    div#pageNum a.selected {
-        background: darkcyan;
-        color: white;
+    div#pageNum a {
+        color: grey;
+        text-decoration: none;
+        margin: 5px;
     }
 
 
-div#pageNum a:hover {
-    background-color: Silver;
-}
+        div#pageNum a.selected {
+            background: darkcyan;
+            color: white;
+        }
+
+
+        div#pageNum a:hover {
+            background-color: Silver;
+        }
 
 
 
@@ -94,24 +94,24 @@ div#genreList {
 
     div#genreList a {
         display: block;
-        margin-left:10px;
+        margin-left: 10px;
         padding: 20px 60px 5px 30px;
         text-decoration: none;
         border-bottom: 1px solid silver;
-        color:black;
+        color: black;
     }
 
-    div#genreList a:hover{
-        background-color: grey;
-    }
+        div#genreList a:hover {
+            background-color: grey;
+        }
 
         div#genreList a.selected {
             background-color: darkcyan;
-            color:white;
+            color: white;
         }
 
-    div#genreList p{
-        margin:1px;
+    div#genreList p {
+        margin: 1px;
     }
 
 
@@ -124,10 +124,9 @@ button.action-button {
     color: white;
     border: 1px solid grey;
     background-color: darkcyan;
-    float: right;
 }
 
-button.action-button:hover {
+    button.action-button:hover {
         background-color: grey;
         border: 1px solid darkcyan;
     }
@@ -142,96 +141,115 @@ button.action-button:hover {
     width: 60%;
 }
 
-#cartTable thead th{
-    font:bold;
-    text-align:right;
-}
+    #cartTable thead th {
+        font: bold;
+        text-align: right;
+    }
 
-#cartTable thead th:first-child{
-    text-align:center;
-}
+        #cartTable thead th:first-child {
+            text-align: center;
+        }
 
-#cartTable thead th:nth-child(2)
-{
-    text-align:left;
-}
-
-
-#cartTable tbody td:first-child {
-    text-align: center;
-}
-
-#cartTable tbody td{
-    padding: 5px 0px 5px 0px;
-    text-align:right;
-}
-
-#cartTable tbody td:nth-child(2)
-{
-    text-align:left;
-}
+        #cartTable thead th:nth-child(2) {
+            text-align: left;
+        }
 
 
-#cartTable tfoot td{
-    border-top: 1px dotted grey;
-    font-weight: bold;
-    text-align:right;
-}
-
-p.cart-button {
-        width:12%;
-        padding: 10px;
-        color: white;
-        border: 1px solid grey;
-        background-color: darkcyan;
+    #cartTable tbody td:first-child {
         text-align: center;
-        margin-left:30px;
     }
 
-    .cart-button a {
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        text-decoration: none;
-        color: white;
+    #cartTable tbody td {
+        padding: 5px 0px 5px 0px;
+        text-align: right;
     }
 
+        #cartTable tbody td:nth-child(2) {
+            text-align: left;
+        }
 
-td button.cart-button {
+
+    #cartTable tfoot td {
+        border-top: 1px dotted grey;
+        font-weight: bold;
+        text-align: right;
+    }
+
+.cart-button {
     padding: 10px;
     color: white;
     border: 1px solid grey;
     background-color: darkcyan;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
 }
 
-.cart-button:hover{
-    background-color:grey;
-    border-color:darkcyan;
+    .cart-button:hover {
+        background-color: grey;
+        border-color: darkcyan;
+    }
+
+a.cart-button {
+    margin-left: 30px;
 }
+
+#cartTable tbody td:last-child {
+    text-align: center;
+}
+
 
 
 /*
     CartSummary style
 */
-div#cart-summary{
-   float:right;
-   margin: 70px;
-   padding: 10px;
-
-   font-family:Verdana, Geneva, Tahoma, sans-serif;
-   font-size:18px;
-   
-   background-color:grey;
-   color:white;
-
-   border: 1px solid silver;
+div#cart-summary {
+    float: right;
+    margin: 70px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    background-color: grey;
+    color: white;
+    border: 1px solid silver;
 }
 
-div#cart-summary a{
-    
-    padding: 5px;
-    text-decoration:none;
-    
-    color:white;
-    background: darkcyan;
+    div#cart-summary a {
+        padding: 5px;
+        text-decoration: none;
+        color: white;
+        background: darkcyan;
+        border: 1px solid silver;
+    }
 
-    border: 1px solid silver;
+#cart-summary a:hover {
+    background-color: silver;
+    border-color: darkcyan;
+}
+
+
+/*
+    **Cashbox style**
+*/
+
+#contentBody_orderForm, #contentBody_messageForm {
+    margin-left: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
+
+.cashbox-field label {
+    display: inline-block;
+    width: 40px;
+    text-align: right;
+    margin: 7px;
+}
+
+#contentBody_orderForm button {
+    margin: 15px 0px 0px 10px;
+    padding: 15px;
+}
+
+#contentBody_orderForm h3, #contentBody_messageForm h2 {
+    margin-top: 0px;
+    padding-top: 15px;
 }

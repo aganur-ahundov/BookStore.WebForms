@@ -16,6 +16,7 @@ namespace BookStore.App_Start
             routes.MapPageRoute(null, "list", "~/Pages/default.aspx");
 
             routes.MapPageRoute("cart", "cart", "~/Pages/CartView.aspx");
+            routes.MapPageRoute("cashbox", "cashbox", "~/Pages/Cashbox.aspx");
         }
     }
 }
